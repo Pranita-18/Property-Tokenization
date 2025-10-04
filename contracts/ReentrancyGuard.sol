@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+abstract contract ReentrancyGuard {
+    uint256 private _status;
+
+    constructor() {
+        _status = 1; // _NOT_ENTERED
+    }
+
+    modifier nonReentrant() {
+        require(_status != 2, "ReentrancyGuard: reentrant call");
+        _status = 2; // _ENTERED
+        _;
+        _status = 1; // _NOT_ENTERED
+    }
+}
