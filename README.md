@@ -136,5 +136,3 @@ npx hardhat verify --network amoy <DEPLOYED_CONTRACT_ADDRESS>
 - Network: Amoy Testnet
 
 ### Thank You
-
-Thank you for taking the time to review my submission. I appreciate the opportunity and look forward to any feedback.
